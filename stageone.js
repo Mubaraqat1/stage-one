@@ -15,11 +15,12 @@ function getDayOfTheWeek() {
 window.onload = function () {
   const current = document.querySelector('[data-testid="currentDayOfTheWeek"]');
   current.textContent = `The current day of the week is: ${getDayOfTheWeek()}`;
-  const currentUTC = document.querySelector('[data-testid="currentUTCTime"]');
-  currentUTC.textContent = `The current UTC time is: ${UTCTime.getTime()} `;
+  let utcTime = document.querySelector('[data-testid="currentUTCTime"]');
+  var currentUTCTimeISOString = new Date().toISOString();
+  utcTime.textContent = `UTC Time: ${currentUTCTimeISOString}`;
 };
 
-const UTCTime = new Date(Date.UTC(year, month, day, hour, minute, second, millisecond))
+
 
 
 // window.onload = function () {};
