@@ -17,7 +17,7 @@ window.onload = function () {
   current.textContent = getDayOfTheWeek();
   let utcTime = document.querySelector('[data-testid="currentUTCTime"]');
   var currentUTCTimeISOString = new Date().toISOString();
-  utcTime.textContent = currentUTCTimeISOString();
+  utcTime.textContent = currentUTCTimeISOString;
 };
 
 
